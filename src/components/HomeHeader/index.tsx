@@ -4,8 +4,8 @@ import { LinearGradient } from 'expo-linear-gradient'
 
 import { styles } from './style'
 import { color } from '@/theme/colors'
-import { Separator } from '../separator'
-import { Summary, SummaryProps } from '../summary'
+import { Separator } from '../Separator'
+import { Summary, SummaryProps } from '../Summary'
 
 export type HomeHeaderProps = {
 	total: string
@@ -17,14 +17,13 @@ type Props = {
 	data: HomeHeaderProps
 }
 
-export function HomeHeader({ data }: Props) {
+export default function HomeHeader({ data }: Props) {
 	return (
 		<LinearGradient
 			style={styles.container}
 			colors={[color.blue[500], color.blue[800]]}
 		>
 			<View>
-				{' '}
 				<Text style={styles.label}>Total que você possues</Text>
 				<Text style={styles.total}>{data.total}</Text>
 			</View>
