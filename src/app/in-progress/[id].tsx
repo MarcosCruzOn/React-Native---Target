@@ -1,0 +1,14 @@
+import { Text, Button, View } from 'react-native'
+import { router, useLocalSearchParams } from 'expo-router'
+
+export default function InProgress() {
+	const params = useLocalSearchParams<{ id: string }>()
+	return (
+		<View
+			style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}
+		>
+			<Text>Em Progresso ID: {params.id}</Text>
+			<Button title="Voltar" onPress={() => router.back()} />
+		</View>
+	)
+}

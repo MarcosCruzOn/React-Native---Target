@@ -2,6 +2,28 @@
   "expo": {
     "name": "target",
     "slug": "target",
-    "version": "1.0.0"
+    "scheme": "target",
+    "version": "1.0.0",
+    "android": {
+      "package": "com.marcoscruz.target",
+      "edgeToEdgeEnabled": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logo_android_icon.png",
+        "backgroundColor": "#3d44cd"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.marcoscruz.target",
+      "icon": "./assets/Logo_ios_icon.png"
+    },
+    "splash": {
+      "image": "./assets/Logo_android_512.png",
+      "backgroundColor": "#3d44cd",
+      "resizeMode": "cover"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font"
+    ]
   }
 }
