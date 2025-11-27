@@ -5,8 +5,10 @@ import { PageHeader } from '@/components/PageHeader'
 import { Progress } from '@/components/Progress'
 import { Transaction, TransactionProps } from '@/components/Transaction'
 import { List } from '@/components/List'
+import { Button } from '@/components/Button'
 
-import { TransactionsType } from '@/utils/transactionsType'
+import { TransactionType } from '@/utils/transactionsType'
+import { router } from 'expo-router'
 
 export default function InProgress() {
 	const params = useLocalSearchParams<{ id: string }>()
@@ -23,21 +25,21 @@ export default function InProgress() {
 			value: 'R$ 200,00',
 			date: '2024-06-01',
 			description: 'Recebimento do salário mensal',
-			type: TransactionsType.Input,
+			type: TransactionType.Input,
 		},
 		{
 			id: '2',
 			value: 'R$ 400,00',
 			date: '2024-06-02',
 			description: 'Recebimento do salário mensal',
-			type: TransactionsType.Input,
+			type: TransactionType.Input,
 		},
 		{
 			id: '3',
 			value: 'R$ 100,00',
 			date: '2024-06-02',
 			description: 'Comer puta',
-			type: TransactionsType.Output,
+			type: TransactionType.Output,
 		},
 	]
 
@@ -53,10 +55,16 @@ export default function InProgress() {
 
 			<List
 				title="Transações"
-				data={transactions}
+				data={[]}
 				renderItem={({ item }) => (
 					<Transaction data={item} onRemove={() => {}} />
 				)}
+				emptyMessage="Nenhuma Transação até o momento..."
+			/>
+
+			<Button
+				title="Nova Transação"
+				onPress={() => router.navigate(`/transaction/${params.id}`)}
 			/>
 		</View>
 	)
