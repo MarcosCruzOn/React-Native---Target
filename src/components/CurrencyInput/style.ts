@@ -3,9 +3,12 @@ import { color, fontFamily } from '@/theme'
 import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
-	container: { width: '100%', gap: 10 },
+	container: {
+		width: '100%',
+		gap: 10,
+	},
 	label: {
-		color: color.gray[400],
+		color: color.gray[600],
 		fontFamily: fontFamily.medium,
 		fontSize: 12,
 	},

@@ -4,23 +4,24 @@ import { StyleSheet } from 'react-native'
 
 export const styles = StyleSheet.create({
 	container: {
-		paddingVertical: 16,
+		height: 42,
+		width: '100%',
 		flexDirection: 'row',
-		alignItems: 'center',
-		gap: 7,
+		backgroundColor: color.gray[100],
+		borderRadius: 8,
 	},
-	info: {
+
+	option: {
 		flex: 1,
+		alignItems: 'center',
+		justifyContent: 'center',
+		flexDirection: 'row',
+		borderRadius: 8,
 		gap: 7,
 	},
-	value: {
-		fontSize: 14,
+	title: {
 		fontFamily: fontFamily.medium,
-		color: color.black,
-	},
-	description: {
-		fontSize: 12,
-		fontFamily: fontFamily.regular,
+		fontSize: 14,
 		color: color.gray[500],
 	},
 })
