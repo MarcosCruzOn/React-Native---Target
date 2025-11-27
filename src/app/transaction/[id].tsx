@@ -2,7 +2,7 @@ import { View, Text, Button } from 'react-native'
 import { router, useLocalSearchParams } from 'expo-router'
 // import { navigate } from 'expo-router/build/global-state/routing'
 
-export default function Transaction() {
+export function Transaction() {
 	const params = useLocalSearchParams<{ id: string }>()
 
 	return (
