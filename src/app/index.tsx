@@ -37,6 +37,20 @@ const targets = [
 		current: 'R$ 900,00',
 		target: 'R$ 1250,00',
 	},
+	{
+		id: '4',
+		name: 'Comprar uma mesa',
+		percentage: '75%',
+		current: 'R$ 900,00',
+		target: 'R$ 1250,00',
+	},
+	{
+		id: '5',
+		name: 'Comprar uma geladeira',
+		percentage: '75%',
+		current: 'R$ 900,00',
+		target: 'R$ 1250,00',
+	},
 ]
 
 export default function Index() {

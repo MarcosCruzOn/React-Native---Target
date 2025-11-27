@@ -1,6 +1,9 @@
-import { Button, View } from 'react-native'
+import { View } from 'react-native'
+
+import { Input } from '@/components/Input'
 import { PageHeader } from '@/components/PageHeader'
-import { router } from 'expo-router'
+import { Button } from '@/components/Button'
+import { CurrencyInput } from '@/components/CurrencyInput'
 
 export default function Target() {
 	return (
@@ -13,7 +16,15 @@ export default function Target() {
 					onPress: () => {},
 				}}
 			/>
-			<Button title="voltar" onPress={() => router.back()}></Button>
+			<View style={{ marginTop: 32, gap: 16 }}>
+				<Input label="Meta" placeholder="Ex: Viagem para o Caribe" />
+				<CurrencyInput
+					label="Valor alvo"
+					value={0}
+					placeholder="R$ 0,00"
+				/>
+				<Button title="Salvar"></Button>
+			</View>
 		</View>
 	)
 }
